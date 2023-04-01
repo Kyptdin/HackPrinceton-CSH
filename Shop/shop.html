@@ -19,6 +19,24 @@
     .card {
   transition: transform 0.2s;
 }
+#popup-container {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+#popup-container.show {
+  filter: none;
+  pointer-events: auto;
+}
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
 
 .card:hover {
   transform: scale(1.1);
@@ -26,9 +44,27 @@
   </style>
 <script>
   
-function showPopup() {
-  document.getElementById("popup").style.display = "block";
+  function showPopup(giftCard) {
+  if (giftCard === "amazon") {
+    document.getElementById("amazon-popup").style.display = "block";
+  } else if (giftCard === "apple") {
+    document.getElementById("apple-popup").style.display = "block";
+  } else if (giftCard === "google") {
+    document.getElementById("google-popup").style.display = "block";
+  }
 }
+
+function closePopup(giftCard) {
+  if (giftCard === "amazon") {
+    document.getElementById("amazon-popup").style.display = "none";
+  } else if (giftCard === "apple") {
+    document.getElementById("apple-popup").style.display = "none";
+  } else if (giftCard === "google") {
+    document.getElementById("google-popup").style.display = "none";
+  }
+}
+
+
 </script>
 </head>
 <body>
@@ -64,54 +100,89 @@ function showPopup() {
     <div class="row">
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00076750160578/e1a1abb1cb3eeca1613d9ffc41595210_large.png&width=512&type=webp&quality=90" class="card-img-top" alt="Amazon gift card" onclick="showPopup()">
+          <img src="https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00076750160578/e1a1abb1cb3eeca1613d9ffc41595210_large.png&width=512&type=webp&quality=90" class="card-img-top" alt="Amazon gift card" onclick="showPopup('amazon')">
           <div class="card-body">
             <h5 class="card-title">Amazon Gift Card</h5>
             <h6 class="card-subtitle mb-2 text-muted">₡ 1000</h6>
-            <button class="btn btn-primary" onclick="showPopup()">Buy Now</button>
+            <button class="btn btn-primary" onclick="showPopup('amazon')">Buy Now</button>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406932_sd.jpg;maxHeight=640;maxWidth=550" class="card-img-top" alt="Apple gift card" onclick="showPopup()">
+          <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406932_sd.jpg;maxHeight=640;maxWidth=550" class="card-img-top" alt="Apple gift card" onclick="showPopup('apple')">
           <div class="card-body">
             <h5 class="card-title">Apple Gift Card</h5>
             <h6 class="card-subtitle mb-2 text-muted">₡ 2000</h6>
-            <button class="btn btn-primary" onclick="showPopup()">Buy Now</button>
+            <button class="btn btn-primary" onclick="showPopup('apple')">Buy Now</button>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5835/5835816_sd.jpg" class="card-img-top" alt="Google gift card" onclick="showPopup()">
+          <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5835/5835816_sd.jpg" class="card-img-top" alt="Google gift card" onclick="showPopup('google')">
           <div class="card-body">
             <h5 class="card-title">Google Gift Card</h5>
             <h6 class="card-subtitle mb-2 text-muted">₡ 500</h6>
-            <button class="btn btn-primary" onclick="showPopup()">Buy Now</button>
+            <button class="btn btn-primary" onclick="showPopup('google')">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
 
-
-    <div id="popup" class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="popupTitle">Amazon gift card</h5>
-            <button type="button" class="close" data-dismiss="modal" onclick="closePopup()">&times;</button>
-          </div>
-          <div class="modal-body">
-            <p id="popupPrice">Price: ₡ 1000</p>
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
+<!-- Amazon Gift Card Popup -->
+<div id="amazon-popup" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Amazon Gift Card</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closePopup('amazon')"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00076750160578/e1a1abb1cb3eeca1613d9ffc41595210_large.png&width=512&type=webp&quality=90" class="img-fluid mb-3" alt="Amazon gift card">
+        <h2>Price: ₡ 1000</h2>
+        <button class="btn btn-secondary">Pay via Verbwire</button>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Apple Gift Card Popup -->
+<div id="apple-popup" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Apple Gift Card</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closePopup('apple')"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406932_sd.jpg;maxHeight=640;maxWidth=550" class="img-fluid mb-3" alt="Apple gift card">
+        <h2>Price: ₡ 2000</h2>
+        <button class="btn btn-secondary">Pay via Verbwire</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Google Gift Card Popup -->
+<div id="google-popup" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        ?<h5 class="modal-title">Google Gift Card</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closePopup('google')"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5835/5835816_sd.jpg" class="img-fluid mb-3" alt="Google gift card">
+        <h2>Price: ₡ 500</h2>
+        <button class="btn btn-secondary">Pay via Verbwire</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/esm/popper.js" integrity="sha384-Tj2h07O1mdA2knbDpe13BbgCUMO+MzOoCtZft57KbJG1szw/zhK5J/ox8+tzWk/t" crossorigin="anonymous"></script>
