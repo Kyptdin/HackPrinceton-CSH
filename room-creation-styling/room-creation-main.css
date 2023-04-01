@@ -1,0 +1,10 @@
+.room-creation-main {
+  padding: 0 4.8rem;
+  margin-top: 50px;
+  height: 60vh;
+}
+
+.room-creation-main-heading-container {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
