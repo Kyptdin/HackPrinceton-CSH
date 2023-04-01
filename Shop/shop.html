@@ -1,61 +1,72 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Shop</title>
+    <link href="shop.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Shop</h1>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Shop</title>
-  <link href="shop.css" rel="stylesheet" type="text/css" />
-</head>
+    <div class="gallery">
+      <div class="content">
+        <img src="https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00076750160578/e1a1abb1cb3eeca1613d9ffc41595210_large.png&width=512&type=webp&quality=90" onclick="showPopup()">
+        <h3>Amazon gift card</h3>
+        <h6>₡ 1000</h6>
+        <div id="popup">
+          <div class="popup-content">
+            <h2>Amazon gift card</h2>
+            <p>Price: ₡ 1000</p>
+            <button>Buy Now</button>
+            <span class="close" onclick="closePopup()">&times;</span>
+          </div>
+        </div>
+      </div>
 
-<body>
-  <h1>Shop</h1>
+      <div class="content">
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406932_sd.jpg;maxHeight=640;maxWidth=550" onclick="showPopup()">
+        <h3>Apple gift card</h3>
+        <h6>₡ 2000</h6>
+        <div id="popup">
+          <div class="popup-content">
+            <h2>Apple gift card</h2>
+            <p>Price: ₡ 2000</p>
+            <button>Buy Now</button>
+            <span class="close" onclick="closePopup()">&times;</span>
+          </div>
+        </div>
+      </div>
 
-  <div class="gallery">
-    <div class="content">
-      <img src="https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00076750160578/e1a1abb1cb3eeca1613d9ffc41595210_large.png&width=512&type=webp&quality=90" onclick="showPopup()">
-      <h3>Amazon gift card</h3>
-      <h6>₡ 1000</h6>
-      <div id="popup">
-        <div class="popup-content">
-          <h2>Amazon gift card</h2>
-          <p>Price: ₡ 1000</p>
-          <button>Buy Now</button>
-          <span class="close" onclick="closePopup()">&times;</span>
+      <div class="content">
+        <img src="https://m.media-amazon.com/images/I/61OdJeN2lFL._SY550_.jpg" onclick="showPopup()">
+        <h3>Google gift card</h3>
+        <h6>₡ 500</h6>
+        <div id="popup">
+          <div class="popup-content">
+            <h2>Google gift card</h2>
+            <p>Price: ₡ 500</p>
+            <button>Buy Now</button>
+            <span class="close" onclick="closePopup()">&times;</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <img src="https://m.media-amazon.com/images/I/61KUgd7qdyL._SX342_SY445_QL70_FMwebp_.jpg" onclick="showPopup()">
+        <h3>Playstation gift card</h3>
+        <h6>₡ 500</h6>
+        <div id="popup">
+          <div class="popup-content">
+            <h2>Playstation gift card</h2>
+            <p>Price: ₡ 500</p>
+            <button>Buy Now</button>
+            <span class="close" onclick="closePopup()">&times;</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="content">
-      <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406932_sd.jpg;maxHeight=640;maxWidth=550" onclick="showPopup()">
-      <h3>Apple gift card</h3>
-      <h6>₡ 2000</h6>
-      <div id="popup">
-        <div class="popup-content">
-          <h2>Apple gift card</h2>
-          <p>Price: ₡ 2000</p>
-          <button>Buy Now</button>
-          <span class="close" onclick="closePopup()">&times;</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="content">
-      <img src="https://m.media-amazon.com/images/I/61OdJeN2lFL._SY550_.jpg" onclick="showPopup()">
-      <h3>Google gift card</h3>
-      <h6>₡ 500</h6>
-      <div id="popup">
-        <div class="popup-content">
-          <h2>Google gift card</h2>
-          <p>Price: ₡ 500</p>
-          <button>Buy Now</button>
-          <span class="close" onclick="closePopup()">&times;</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="shop.js"></script>
-</body>
-
+    <script src="shop.js"></script>
+  </body>
 </html>
