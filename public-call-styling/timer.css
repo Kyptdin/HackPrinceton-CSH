@@ -1,0 +1,28 @@
+
+
+#pomodoroTimer 
+{
+    font-family: 'Ubuntu', sans-serif;
+
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+    background-color: rgb(236, 236, 236);
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#mainTimer 
+{
+    font-size: 100px;
+}
+
+#pomodoroTimer p 
+{
+    font-size: 25px;
+}
