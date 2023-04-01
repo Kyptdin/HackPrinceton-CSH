@@ -77,7 +77,6 @@
 .class-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .class-item {
@@ -91,6 +90,7 @@
   height: 30%;
   border-width: 1px;
   transition: all 0.3s;
+  margin-bottom: 15px;
 }
 
 .class-item-img-container {
@@ -134,6 +134,8 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  align-items: center;
+  gap: 10px;
 }
 
 .join-server-btn {
