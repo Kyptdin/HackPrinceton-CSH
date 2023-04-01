@@ -5,6 +5,7 @@
 }
 
 body {
+  height: 100vh;
   font-family: "Ubuntu", sans-serif;
   color: #444;
 }
