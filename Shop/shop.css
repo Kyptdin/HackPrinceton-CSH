@@ -14,6 +14,9 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
 }
+.card {
+  height: 100%;
+}
 
 .content {
 
