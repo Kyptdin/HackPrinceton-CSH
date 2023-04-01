@@ -5,49 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Calling...</title>
-    
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="public-call-styling/callers.css"/>
-    <link rel="stylesheet" href="public-call-styling/timer.css"/>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="public-call-styling/callers.css" />
+    <link rel="stylesheet" href="public-call-styling/timer.css" />
+    <link rel="stylesheet" href="public-call-styling/chatBox.css" />
 
     <script defer src="script.js"></script>
+    <script defer src="public-call.js"></script>
   </head>
 
   <body>
     <div id="callers">
-        <div class="callerLogo">
-            <img src="images/ProfileIcon.png">
-        </div>
+      <div class="callerLogo">
+        <img src="images/ProfileIcon.png" />
+      </div>
 
-        <div class="callerLogo talking">
-            <img src="images/ProfileIcon.png">
-        </div>
+      <div class="callerLogo talking">
+        <img src="images/ProfileIcon.png" />
+      </div>
     </div>
 
-    <div id="manageSession>">
-        
-    </div>
+    <div id="manageSession>"></div>
 
     <div id="mainScreen">
-        <div id="pomodoroTimer">
-            <h1 id="mainTimer">30:00:00</h1>
-            <p>keep focusing.</p>
+      <div id="pomodoroTimer">
+        <div>
+          <h1 id="mainTimer">25:00:00</h1>
+          <p>keep focusing.</p>
         </div>
-    
-        <div id="chatBox">
-            <div id="messages"> 
-                
-            </div>
-    
-            <div id="textbox">
-                
-            </div>
-        </div>
+      </div>
+
+      <div id="chatBox">
+        <div id="messages"></div>
+
+        <textarea rows="5" cols="80" id="textbox"></textarea>
+      </div>
     </div>
   </body>
 </html>

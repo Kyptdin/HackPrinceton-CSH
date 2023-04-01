@@ -9,9 +9,11 @@
 
     grid-column-start: 1;
     grid-column-end: 2;
+    height: 100%;
     
     background-color: rgb(236, 236, 236);
 
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
