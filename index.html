@@ -45,29 +45,17 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <!-- HEADER SECTION -->
-    <!-- <header class="home-page-header"> -->
-    <!-- <div class="home-page-logo">
-        <img src="images/logo.png" alt="logo" class="logo" />
-      </div> -->
-    <!-- <nav class="home-page-header-nav">
-        <div class="home-page-header-nav-item">Pomodoro</div>
-        <div class="home-page-header-nav-item">Home</div>
-        <div class="home-page-icon">
-          <img
-            src="https://www.freeiconspng.com/thumbs/profile-icon-png/account-profile-user-icon--icon-search-engine-10.png"
-            alt="icon"
-            class="home-page-header-nav-icon"
-          />
-        </div>
-      </nav> -->
     <nav
       class="navbar navbar-expand-lg bg-body-tertiary"
       style="padding-left: 20px"
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
-          ><img src="images/logo.png" alt="" width="200px" height="40px"
+          ><img
+            src="images/DNDisruptDNDisrupt-removebg-preview.png"
+            alt=""
+            width="200px"
+            height="40px"
         /></a>
         <button
           class="navbar-toggler"
@@ -109,20 +97,74 @@
     <!-- </header> -->
     <!-- MAIN SECTION -->
     <main class="home-page-main">
-      <div class="form">
-        <i class="fa fa-search"></i>
-        <input
-          type="text"
-          class="form-control form-input"
-          placeholder="Search anything..."
-        />
-        <span class="left-pan"><i class="fa fa-microphone"></i></span>
-      </div>
+      <form class="form-inline my-2 my-lg-0 home-page-searchbar">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
 
       <div class="class-list">
-        <div class="class-item"></div>
-        <div class="class-item"></div>
-        <div class="class-item"></div>
+        <div class="class-item">
+          <div class="class-item-img-container">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIi6hJ0fjvSAdchb8lWdKSKFRk981Qxn5pv5b1aXntzeMxAuYTuewDkRU1KeJnVInHdvU&usqp=CAU"
+              alt=""
+              class="class-item-img"
+            />
+          </div>
+          <div class="class-item-name">
+            <p class="class-item-name-">AP Biology</p>
+          </div>
+          <div class="class-item-people">
+            <div class="class-item-person">
+              <img
+                src="https://randomuser.me/api/portraits/women/74.jpg"
+                class="class-item-person-img"
+              />
+            </div>
+            <div class="class-item-person">
+              <img
+                src="https://randomuser.me/api/portraits/women/78.jpg"
+                class="class-item-person-img"
+              />
+            </div>
+            <div class="class-item-person">
+              <img
+                src="https://randomuser.me/api/portraits/women/34.jpg"
+                class="class-item-person-img"
+              />
+            </div>
+          </div>
+          <div class="server-info">
+            <ul class="server-info-list">
+              <li class="server-info-list-item">10/80</li>
+              <li class="server-info-list-item">
+                <button class="join-server-btn">Join</button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
   </body>
