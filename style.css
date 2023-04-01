@@ -3,12 +3,19 @@
   padding: 0;
   box-sizing: inherit;
 }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+
 body {
-  /*Font family goes here*/
+  font-family: 'Ubuntu', sans-serif;
   color: #444;
   background-color: #f3f3f3;
+}
+
+#mainScreen {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
