@@ -1,0 +1,23 @@
+{
+  "name": "hackprinceton-csh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "HackPrinceton-CSH"
+  },
+  "keywords": [
+    "CSH"
+  ],
+  "author": "CSh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0"
+  }
+}
