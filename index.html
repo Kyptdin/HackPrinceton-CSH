@@ -1,63 +1,213 @@
-<!-- public/index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>WebCage Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Home-page-styling/home-page-nav.css" />
+    <link rel="stylesheet" href="Home-page-styling/home-page-main.css" />
+    <!-- Styling below -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons pack -->
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <div class="join-container">
-      <header class="join-header">
-        <h1><i class="fas fa-kiwi-bird"></i> WebCage </h1>
-      </header>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary"
+      style="padding-left: 20px"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.jpg" alt="" width="200px" height="40px" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pomodoro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Shop/shop.html">Shop</a>
+            </li>
+            <li class="nav-item ml-auto">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                />
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-      <main class="join-main">
-        <form action="chat.html">
-          <div class="form-control">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter email address..."
-              required
+    <!-- </header> -->
+    <!-- MAIN SECTION -->
+    <main class="home-page-main">
+      <form class="form-inline my-2 my-lg-0 home-page-searchbar">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="class-list">
+        <!-- ITEM #1 -->
+        <div class="class-item">
+          <div class="class-item-img-container">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIi6hJ0fjvSAdchb8lWdKSKFRk981Qxn5pv5b1aXntzeMxAuYTuewDkRU1KeJnVInHdvU&usqp=CAU"
+              alt=""
+              class="class-item-img"
             />
           </div>
-          <div class="form-control">
-            <label for="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              placeholder="Enter username..."
-              required
+          <div class="class-item-name">
+            <p class="class-item-name">AP Biology</p>
+          </div>
+          <div class="class-item-people">
+            <div class="class-item-person">
+              <img
+                src="https://randomuser.me/api/portraits/women/74.jpg"
+                class="class-item-person-img"
+              />
+            </div>
+            <div class="class-item-person">
+              <img
+                src="https://randomuser.me/api/portraits/women/78.jpg"
+                class="class-item-person-img"
+              />
+            </div>
+            <div class="class-item-person">
+              <img
+                src="https://randomuser.me/api/portraits/women/34.jpg"
+                class="class-item-person-img"
+              />
+            </div>
+          </div>
+          <div class="server-info">
+            <ul class="server-info-list">
+              <li class="server-info-list-item">4/5</li>
+              <li class="server-info-list-item">
+                <button class="join-server-btn">Join</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Item #2-->
+        <div class="class-item">
+          <div class="class-item-img-container">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv1kmcbIEaBvNcvYwRBep7zLLk4ovmF6Zzhw&usqp=CAU"
+              alt=""
+              class="class-item-img"
             />
           </div>
-          <div class="form-control">
-            <label for="room">Chat Channel</label>
-            <select name="room" id="room">
-              <option value="Business">Business </option>
-              <option value="Technology">Technology</option>
-              <option value="Sport">Sports</option>
-              <option value="news">International News</option>
-              <option value="cats">Just Cats</option>
-            </select>
+          <div class="class-item-name">
+            <p class="class-item-name">AP Biology</p>
           </div>
-          <div class="flex">
-            <button type="submit" class="btn">Login to Chat</button>
+          <div class="class-item-people">
+            <div class="class-item-person">
+              <img
+                src="https://randomuser.me/api/portraits/women/74.jpg"
+                class="class-item-person-img"
+              />
+            </div>
+            <div class="class-item-person">
+              <img
+                src="https://randomuser.me/api/portraits/women/78.jpg"
+                class="class-item-person-img"
+              />
+            </div>
+            <div class="class-item-person">
+              <img
+                src="https://randomuser.me/api/portraits/women/34.jpg"
+                class="class-item-person-img"
+              />
+            </div>
           </div>
-        </form>
-      </main>
-    </div>
+          <div class="server-info">
+            <ul class="server-info-list">
+              <li class="server-info-list-item">1/5</li>
+              <li class="server-info-list-item">
+                <button class="join-server-btn">Join</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

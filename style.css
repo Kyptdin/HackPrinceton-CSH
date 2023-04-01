@@ -4,16 +4,10 @@
   box-sizing: inherit;
 }
 
-html {
-  font-size: 62.5%;
-  /* box-sizing: border-box; */
-}
-
 body {
-  font-family: 'Ubuntu', sans-serif;
-  color: #444;
-  background-color: #f3f3f3;
   height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  color: #444;
 }
 
 #mainScreen {

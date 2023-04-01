@@ -1,5 +1,5 @@
-.home-page-logo {
-  font-size: 5rem;
+.logo {
+  height: 3.2rem;
 }
 
 .home-page-header {
@@ -8,6 +8,7 @@
   align-items: center;
   padding: 0 4.8rem;
   background-color: #f3f3f3;
+  margin-bottom: 3.6rem;
 }
 
 .home-page-header-nav {
@@ -22,17 +23,20 @@
 }
 
 .home-page-header-nav-icon {
-  width: 1.8rem;
-  height: rem;
+  height: 3.6rem;
 }
 
 .home-page-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-style: solid;
-  border-width: 1px;
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
+  /* border-style: solid; */
+  /* border-width: 1px; */
+  width: 6rem;
+  height: 6rem;
+  /* border-radius: 50%; */
+}
+
+.home-page-searchbar {
+  margin-bottom: 4.8rem;
 }
