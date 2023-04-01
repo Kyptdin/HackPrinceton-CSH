@@ -1,0 +1,32 @@
+
+
+#chatBox {
+    display: grid;
+    grid-template-rows: 85% 15%;
+}
+
+#messages {
+    background-color: #f1f1f1;
+}
+
+#textbox {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: white;
+
+    border-radius: 5px;
+    border: 0px;
+
+    padding: 10px 10px 10px 10px;
+    resize:  none;
+
+    transition: 0.3s;
+}
+
+#textbox:focus {
+    border-radius: 0px;
+    border: 0px;
+    outline: none;
+
+    transition: 0.3s;
+}
