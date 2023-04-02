@@ -14,15 +14,16 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
-})
+});
+
+
+
 
 // app.post('/submit', (req, res) => {
 //   const data = req.body;
 //   console.log(data); // log the received data
 //   res.send('Data received successfully.'); // send a response to the client
 // });
-
-
 
 app.post('/submit', (req, res) => {
   MongoClient.connect(mongoUrl, (err, client) => {
