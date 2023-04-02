@@ -46,6 +46,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="room-creation-script.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -103,7 +104,11 @@
         <h2>Create Room</h2>
       </div>
       <!-- <form action="submit"></form> -->
-      <button>Hi there</button>
+      <form id="myForm">
+        <label for="myInput">Make a new room:</label>
+        <input type="text" id="myInput" />
+        <button type="submit">Create Room</button>
+      </form>
     </main>
   </body>
 </html>
