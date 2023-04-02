@@ -99,7 +99,7 @@ function startTimer() {
           max_tokens: 10,
           n: 1,
           stop: "\n",
-        };
+        }; 
 
         const requestOptions = {
           method: "POST",
@@ -124,14 +124,7 @@ function startTimer() {
   
   
 
-  // // Event listener for when the user submits a new message
-  // chatInput.addEventListener("input", function(event) {
-  //   const message = event.target.value;
-  //   if (message.trim() !== "") {
-  //     addMessage("User", message);
-  //   }
-  // });
-  // Event listener for when the user submits a new message
+
 chatInput.addEventListener("keyup", function(event) {
   const message = event.target.value.trim();
   if (message !== "" && event.key === "Enter") {
