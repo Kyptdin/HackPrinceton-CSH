@@ -34,10 +34,10 @@ function startTimer() {
 
       startTimer();
     });
+
   // Get references to the chat elements
-  const chatPopup = document.getElementById("chatPopup");
-  const chatMessages = document.getElementById("chatMessages");
-  const chatInput = document.getElementById("chatInput");
+  const chatMessages = document.getElementById("messages");
+  const chatInput = document.getElementById("textbox");
 
   // Function to add a new message to the chat
   function addMessage(message) {
@@ -46,21 +46,102 @@ function startTimer() {
     chatMessages.appendChild(messageElement);
   }
 
-  // Event listener for when the user clicks the "Open Chat" button
-  document.getElementById("openChat").addEventListener("click", function () {
-    // Display the pop-up chat
-    chatPopup.style.display = "block";
-  });
+  function generateRandomUsername() {
+    const randomNumber = Math.floor(Math.random() * 1000);
+    const username = "user_" + randomNumber;
+    return username;
+  }
 
-  // Event listener for when the user submits a new message
-  chatInput.addEventListener("keydown", function (event) {
-    if (event.keyCode === 13 && chatInput.value.trim() !== "") {
-      // Add the new message to the chat
-      addMessage(chatInput.value);
-      // Clear the input field
-      chatInput.value = "";
+  let newName = generateRandomUsername();
+
+  function addMessage(username, message, override = false) {
+    // Truncate the message if it exceeds 30 characters.
+    if (message.length > 15 && override) {
+      message = message.substr(0, 15) + "...";
     }
-  });
+  
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("messageBox");
+  
+    const usernameElement = document.createElement("span");
+    const messageText = document.createElement("span");
+    const timestampElement = document.createElement("span");
+  
+    usernameElement.innerText = username + ": ";
+    usernameElement.classList.add("username");
+
+    messageText.innerText = message;
+    messageText.classList.add("message");
+
+    const timestamp = new Date().toLocaleString([], { hour: "numeric", minute: "numeric" }); // Only display the hour and minute.
+    timestampElement.innerText = `(${timestamp}) `;
+    timestampElement.classList.add("timeStamp");
+  
+    messageElement.appendChild(usernameElement);
+    messageElement.appendChild(messageText);
+    messageElement.appendChild(timestampElement);
+  
+    chatMessages.appendChild(messageElement);
+  }
+
+  const apiKey = "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";
+  const apiUrl = "https://api.openai.com/v1/engines/davinci-codex/completions";
+
+  function handleUserInput(event) {
+    const message = event.target.value.trim();
+    if (message !== "" && event.key === "Enter") {
+      addMessage(newName, message);
+
+      // ai bot
+      if (message.startsWith("@gpt")) {
+        const requestBody = {
+          prompt: message.replace("@gpt", "").trim(),
+          max_tokens: 10,
+          n: 1,
+          stop: "\n",
+        };
+
+        const requestOptions = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify(requestBody),
+        };
+        
+
+        fetch(apiUrl, requestOptions)
+          .then(response => response.json())
+          .then(data => addMessage("GPT", data, true));
+
+      };
+      event.target.value = "";
+    }
+  }
+
+  chatInput.addEventListener("keyup", handleUserInput);
+  
+  
+
+  // // Event listener for when the user submits a new message
+  // chatInput.addEventListener("input", function(event) {
+  //   const message = event.target.value;
+  //   if (message.trim() !== "") {
+  //     addMessage("User", message);
+  //   }
+  // });
+  // Event listener for when the user submits a new message
+chatInput.addEventListener("keyup", function(event) {
+  const message = event.target.value.trim();
+  if (message !== "" && event.key === "Enter") {
+    addMessage(newName, message);
+    event.target.value = "";
+  }
+});
+
+  
+  
 }
 
 document.addEventListener("DOMContentLoaded", startTimer);
