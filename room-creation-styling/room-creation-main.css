@@ -8,3 +8,18 @@
   border-bottom: 1px solid black;
   padding: 10px;
 }
+
+.myForm-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.myForm-input {
+  width: 50%;
+}
+
+.myForm-btn {
+  border: none;
+  padding: 12px 14px;
+}
