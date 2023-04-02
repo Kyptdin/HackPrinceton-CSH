@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 //   res.send('Data received successfully.'); // send a response to the client
 // });
 
-app.post('/submit', (req, res) => {
+app.post('/submitClassName', (req, res) => {
   MongoClient.connect(mongoUrl, (err, client) => {
     if (err) throw err;
     const db = client.db('myapp');
@@ -39,7 +39,23 @@ app.post('/submit', (req, res) => {
    });
  });
 
-app.use(express.static(path.join("Server", 'public')))
+
+ app.post('/submitClassDescription', (req, res) => {
+  MongoClient.connect(mongoUrl, (err, client) => {
+    if (err) throw err;
+    const db = client.db('myapp');
+    const collection = db.collection('mycollection');
+    collection.insertOne(req.body, (err, result) => {
+      if (err) throw err;
+      console.log('Data inserted');
+      res.send('Data inserted');
+      client.close();
+    });
+   });
+ });
+
+
+ app.use(express.static(path.join("Server", 'public')))
 app.use("/posts", posts);
 
 app.listen(port, () => {
