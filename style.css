@@ -16,7 +16,7 @@ body {
   height: 100%;
 }
 
-#background {
+.background {
   background-image: url("images/background.png");
   opacity: 0.05;
 
@@ -28,4 +28,13 @@ body {
   height: 100vh;
   
   z-index: -3;
+}
+
+.navbar-button:hover {
+  transform: scale(120%);
+  transition: 0.15s;
+}
+
+.navbar-button {
+  transition: 0.15s;
 }

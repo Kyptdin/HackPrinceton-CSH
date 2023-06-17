@@ -1,0 +1,32 @@
+
+.card {
+  height: 100%;
+  background-color: rgb(23, 23, 23);
+
+  padding: 60px 100px 60px 100px;
+
+  overflow: hidden;
+}
+
+.card-background {
+  background-image: url("../images/background-card.png");
+  opacity: 10%;
+
+  width: 100%; 
+  height: 100%;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  overflow: hidden;
+  z-index: 0;
+}
+
+.card img, .card .info {
+  z-index: 1;
+}
+
+.card-row {
+  margin-bottom: 30px;
+}

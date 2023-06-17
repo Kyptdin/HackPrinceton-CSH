@@ -148,12 +148,3 @@
   height: 100%;
   gap: 10px;
 }
-
-.navbar-button:hover {
-  transform: scale(120%);
-  transition: 0.15s;
-}
-
-.navbar-button {
-  transition: 0.15s;
-}
