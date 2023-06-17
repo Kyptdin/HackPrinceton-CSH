@@ -15,15 +15,17 @@
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="Home-page-styling/home-page-nav.css" />
     <link rel="stylesheet" href="Home-page-styling/home-page-main.css" />
+
     <!-- Styling below -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,28 +33,35 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    
     <!-- Icons pack -->
     <script
       defer
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
+
     <script
       defer
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
     <script defer src="script.js"></script>
   </head>
   <body>
+    <div id="background"></div>
+
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary"
-      style="padding-left: 20px"
-    >
+      class="navbar navbar-expand-lg shadow bg-white"
+      style="padding-left: 20px">
+
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="images/logo.jpg" alt="" width="200px" height="40px" />
+
+        <a class="navbar-brand" href="index.html">
+          <h1>DNDisrupt</h1>
         </a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -62,34 +71,29 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+
+          <span class="navbar-toggler-icon"> </span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pomodoro</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Shop/shop.html">Shop</a>
-            </li>
-            <li class="nav-item ml-auto">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="48"
-                height="48"
-                fill="currentColor"
-                class="bi bi-person-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-                />
-              </svg>
-            </li>
-          </ul>
+
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="#" class="mx-1 navbar-button">
+            <img src="images/home.png" class="bg-black rounded p-2" width="32px">
+          </a>
+
+          <a href="#" class="mx-1 navbar-button">
+            <img src="images/timer.png" class="bg-black rounded p-2" width="32px">
+          </a>
+
+          <a href="Shop/shop.html" class="mx-1 navbar-button">
+            <img src="images/spend.png" class="bg-black rounded p-2" width="32px">
+          </a>
+
+          <div class="d-flex justify-content-center align-items-center">
+            <img 
+              class="rounded mx-4  p-2 rounded-pill shadow bg-white"
+              src="images/ProfileIcon.png"
+              width="30px" height="30px">
+          </div>
         </div>
       </div>
     </nav>
@@ -97,110 +101,121 @@
     <!-- </header> -->
     <!-- MAIN SECTION -->
     <main class="home-page-main">
-      <form class="form-inline my-2 my-lg-0 home-page-searchbar">
-        <div class="input-group">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-search"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </form>
+
+      <!-- search bar -->
+      <h2 class="mt-5">SEARCH</h2>
+
+      <div class="input-group mt-3 mb-5 bg-white">
+          <input 
+            class="form-control display-5 rounded-pill shadow-lg border-0 py-3 px-4 bg-transparent" 
+            type="search" 
+          >
+          
+          <span class="input-group-append">
+              <div class="input-group-text border-0 bg-transparent ml-n5"><i class="fa fa-search"></i></div>
+          </span>
+      </div>
+
+      <h2 class="mt-3 mb-2">RESULTS</h2>
 
       <div class="class-list">
-        <!-- ITEM #1 -->
-        <div class="class-item px-5">
+        <!-- Example Item one -->
+        <div class="class-item px-5 bg-black">
           <div class="class-item-img-container">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIi6hJ0fjvSAdchb8lWdKSKFRk981Qxn5pv5b1aXntzeMxAuYTuewDkRU1KeJnVInHdvU&usqp=CAU"
+              src="https://www.leica-microsystems.com/fileadmin/academy/user_upload/cell-biology.image-gallery-teaser.jpg"
               alt=""
               class="class-item-img"
             />
           </div>
-          <div class="class-item-name">
-            <p class="class-item-name">MICRO-BIOLOGY</p>
+
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <h3 class="class-item-name mb-4 text-white">MICRO-BIOLOGY</h3>
+
+            <div class="class-item-people">
+              <div class="class-item-person">
+                <img
+                  src="https://randomuser.me/api/portraits/women/74.jpg"
+                  class="class-item-person-img"
+                />
+              </div>
+              <div class="class-item-person">
+                <img
+                  src="https://randomuser.me/api/portraits/women/78.jpg"
+                  class="class-item-person-img"
+                />
+              </div>
+              <div class="class-item-person">
+                <img
+                  src="https://randomuser.me/api/portraits/women/34.jpg"
+                  class="class-item-person-img"
+                />
+              </div>
+            </div>
           </div>
-          <div class="class-item-people">
-            <div class="class-item-person">
-              <img
-                src="https://randomuser.me/api/portraits/women/74.jpg"
-                class="class-item-person-img"
-              />
-            </div>
-            <div class="class-item-person">
-              <img
-                src="https://randomuser.me/api/portraits/women/78.jpg"
-                class="class-item-person-img"
-              />
-            </div>
-            <div class="class-item-person">
-              <img
-                src="https://randomuser.me/api/portraits/women/34.jpg"
-                class="class-item-person-img"
-              />
-            </div>
-          </div>
-          <div class="server-info">
-            <ul class="server-info-list">
-              <li class="server-info-list-item">3/5</li>
-              <li class="server-info-list-item">
-                <a class="join-server-btn btn btn-secondary mt-4 rounded-1 px-5" href="public-call.html">Join</a>
-              </li>
-            </ul>
+
+          <!-- join call component -->
+          <div class="server-info d-flex flex-column justify-content-center align-items-center">
+            <h3 class="mb-3 text-white">3/5</h3>
+            <a type="button" class="btn btn-warning btn-lg" href="public-call.html">JOIN</a>
           </div>
         </div>
-        <!-- Item #2-->
-        <div class="class-item px-5">
+
+        <!-- Example Item two -->
+        <div class="class-item px-5 bg-black">
           <div class="class-item-img-container">
-            <img src="https://strapi-image-store.s3.amazonaws.com/programmingpackagecodes5_ea21b51650.png" alt="" class="class-item-img" />
+            <img
+              src="https://wallpaperaccess.com/full/912528.jpg"
+              alt=""
+              class="class-item-img"
+            />
           </div>
-          <div class="class-item-name">
-            <p class="class-item-name">COMPUTER SCIENCE</p>
+
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <h3 class="class-item-name mb-4 text-white">COMPUTER SCIENCE</h3>
+
+            <div class="class-item-people">
+              <div class="class-item-person">
+                <img
+                  src="https://randomuser.me/api/portraits/men/18.jpg"
+                  class="class-item-person-img"
+                />
+              </div>
+
+              <div class="class-item-person">
+                <img
+                  src="https://randomuser.me/api/portraits/women/43.jpg"
+                  class="class-item-person-img"
+                />
+              </div>
+
+              <div class="class-item-person">
+                <img
+                  src="https://randomuser.me/api/portraits/women/81.jpg"
+                  class="class-item-person-img"
+                />
+              </div>
+
+              <div class="class-item-person">
+                <img
+                  src="https://randomuser.me/api/portraits/women/46.jpg"
+                  class="class-item-person-img"
+                />
+              </div>
+
+              <div class="class-item-person">
+                <img
+                  src="https://randomuser.me/api/portraits/women/95.jpg"
+                  class="class-item-person-img"
+                />
+              </div>
+            </div>
           </div>
-          <div class="class-item-people">
-            <div class="class-item-person">
-              <img
-                src="https://randomuser.me/api/portraits/men/11.jpg"
-                class="class-item-person-img"
-              />
-            </div>
-            <div class="class-item-person">
-              <img
-                src="https://randomuser.me/api/portraits/men/27.jpg"
-                class="class-item-person-img"
-              />
-            </div>
-            <div class="class-item-person">
-              <img
-                src="https://randomuser.me/api/portraits/men/65.jpg"
-                class="class-item-person-img"
-              />
-            </div>
-          </div>
-          <div class="server-info">
-            <ul class="server-info-list">
-              <li class="server-info-list-item">3/5</li>
-              <li class="server-info-list-item">
-                <a type="button" class="join-server-btn btn btn-secondary mt-4 rounded-1 px-5" href="public-call.html">Join</a>
-              </li>
-            </ul>
+
+          <!-- join call component -->
+          <div class="server-info d-flex flex-column justify-content-center align-items-center">
+            <h3 class="mb-3 text-white">5/5</h3>
+            <a type="button" class="btn btn-warning btn-lg disabled">JOIN</a>
           </div>
         </div>
       </div>
