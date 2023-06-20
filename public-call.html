@@ -41,50 +41,51 @@
   <body>
     <div id="callers">
       <div class="callerLogo">
-        <img src="images/ProfileIcon.png" />
+        <img src="https://randomuser.me/api/portraits/women/74.jpg"/>
       </div>
-
-      <div class="callerLogo talking">
-        <img src="images/ProfileIcon.png" />
+      <div class="callerLogo">
+        <img src="https://randomuser.me/api/portraits/women/78.jpg"/>
+      </div>
+      <div class="callerLogo">
+        <img src="https://randomuser.me/api/portraits/women/34.jpg"/>
+      </div>
+      <div class="callerLogo callerLogoAnonymous talking">
+        <img src="images/ProfileIcon.png"/>
       </div>
     </div>
 
     <div id="mainScreen">
       <div id="pomodoroTimer">
-        <div>
+        <div class="design-background"></div>
+
+        <div style="z-index: 2;">
           <div id="flipdown" class="flipdown"></div>
           <p id="quoteText" class="mt-3">keep focusing.</p>
 
           <div id="manageSession position-relative">
-            <button type="button" class="btn btn-secondary mt-4 rounded-1">
-              UNMUTE
+            <button type="button" class="btn bg-black mt-4 rounded-1 p-3">
+              <img src="images/microphone.png" width="25px">
             </button>
             <a
               type="button"
-              class="btn btn-danger mt-4 rounded-1"
+              class="btn mt-4 rounded-1 p-3"
+              style="background-color: rgb(180, 0, 0);"
               href="index.html"
-              >LEAVE</a
-            >
-            <button type="button" class="btn btn-secondary mt-4 rounded-1">
-              SETTINGS
+              >
+              <img src="images/missed-call.png" width="25px">
+            </a>
+
+            <button type="button" class="btn bg-black mt-4 rounded-1 p-3">
+              <img src="images/settings.png" width="25px">
             </button>
           </div>
         </div>
       </div>
 
-      <div id="chatBox">
+      <div id="chatBox" style="z-index: 2;">
         <div id="messages"></div>
-
-        <textarea rows="3" cols="80" id="textbox"></textarea>
+        <textarea rows="3" cols="61" id="textbox"></textarea>
       </div>
     </div>
-    <!-- <div id="chatPopup">
-      <div id="chatMessages"></div>
-      <input
-        type="text"
-        id="chatInput"
-        placeholder="Type your message here..."
-      />
-    </div> -->
   </body>
 </html>

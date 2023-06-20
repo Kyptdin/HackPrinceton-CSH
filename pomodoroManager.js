@@ -56,8 +56,8 @@ function startTimer() {
 
   function addMessage(username, message, override = false) {
     // Truncate the message if it exceeds 30 characters.
-    if (message.length > 15 && override) {
-      message = message.substr(0, 15) + "...";
+    if (message.length > 25 && override) {
+      message = message.substr(0, 25) + "...";
     }
   
     const messageElement = document.createElement("div");
@@ -90,7 +90,7 @@ function startTimer() {
   function handleUserInput(event) {
     const message = event.target.value.trim();
     if (message !== "" && event.key === "Enter") {
-      addMessage(newName, message);
+      addMessage(newName, message, false);
 
       // ai bot
       if (message.startsWith("@gpt")) {

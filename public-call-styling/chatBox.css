@@ -1,26 +1,33 @@
 
 
 #chatBox {
-    display: grid;
-    grid-template-rows: 85% 15%;
+    background-color: rgb(21, 21, 21);
 }
 
 #messages {
-    background-color: #f1f1f1;
+    overflow: auto;
+    height: 85vh;
 }
 
 #textbox {
     grid-row-start: 2;
     grid-row-end: 3;
-    background-color: white;
-
-    border-radius: 5px;
+    background-color: #000000;
+    color: white;
     border: 0px;
 
     padding: 10px 10px 10px 10px;
     resize:  none;
 
+    height: 15vh;
+    position: fixed;
+    bottom: 0px;
+
     transition: 0.3s;
+}
+
+#textbox:focus {
+    outline: none;
 }
 
 .messageBox:first-child {
@@ -29,28 +36,36 @@
 
 .messageBox {
     margin-bottom: 20px;
-    padding-left: 20px;
+    margin-left: 20px;
+
+    display: flex;
+    justify-content: left;
+    align-items: top;
 }
 
 .message {
-    background-color: rgb(0, 112, 181);
+    background-color: rgb(211, 211, 211);
     border-radius: 3px;
 
     padding: 10px 10px 10px 10px;
-    color: white;
+    color: rgb(0, 0, 0);
 
-    margin-top: 50px;
+    inline-size: 320px;
+    overflow-wrap: break-word;
 }
 
 .timeStamp {
-    color: grey;
-    background-color: lightgrey;
+    color: white;
+
     border-radius: 3px;
     font-size: 10px;
-    padding: 5px 5px 5px 5px;
+
+    padding: 10px 5px 5px 5px;
     margin-left: 3px;
 }
 
-.userName {
-    padding-right: 2px;
+.username {
+    padding-top: 10px;
+    margin-right: 5px;
+    color: white;
 }
